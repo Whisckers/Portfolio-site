@@ -1,1009 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    .hero {
+      background: #f8f9fa;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .skills .progress {
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
 
-        <link rel="stylesheet" href="assets/css/styles.css">
-
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-
-
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Mr.Mutema</a>
-                </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
-                        <li class="nav__item"><a href="#Work Experience" class="nav__link">Work Experience</a></li>
-                        <li class="nav__item"><a href="#Work Images" class="nav__link">Work Images</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-          <section class="home bd-grid" id="home">
-  <div class="home__data">
-    <h1 class="home__title">
-      Good day!,<br />
-      Dumelang!<br />
-      Goeie dag!<br />
-      Mangwanani<br />
-      I'am <span class="home__title-color">Brendon</span><br />
-      an IS Graduate
-    </h1>
-<a href="#contact" class="button">Contact</a>
-
-  </div>
-
-  <div class="home__social">
-    <a href="#" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
-    <a href="#" class="home__social-icon"><i class="bx bxl-behance"></i></a>
-    <a href="#" class="home__social-icon"><i class="bx bxl-github"></i></a>
-  </div>
-
-  <div class="home__img">
-    <img src="assets/img/perfil.png" alt="Profile Picture" class="home__blob-img" />
-  </div>
-</section>
-
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">My short summary</h2>
-
-                        <p style="text-align: justify;">I am a detail-oriented Information Systems graduate with over five years of experience in IT installation and maintenance, helpdesk operations, IT infrastructure support and Asset Management. I am committed to customer care, with a strong focus on service delivery and quality assurance. I have foundational knowledge and training in AI research, IT audit practices, and system monitoring using tools such as NiTO SaaS. I also have hands-on experience with helpdesk and CRM/ERP platforms including Heatbetz, Zoho Desk, and ServiceNow, as well as patch management solutions like Itarian and Ansible. 
-                          <br><br>I'm an optimistic and adaptable individual, who loves learning and committed to every task I am assigned to. One thing about me is I will always strive to go beyond my expectations.</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-         <!--===== SKILLS =====-->
-<section class="skills section" id="skills">
-  <h2 class="section-title">Skill accumulated overtime</h2>
-
-  <h2 class="skills__subtitle">Professional Skills</h2>
-  <p class="skills__text">
-    These are some skills I have gained during my tenure as an undergraduate and working as an IT Support Technician and as a student.
-  </p>
-
-  <div class="skills__container bd-grid">
-    <div class="skills__data">
-      <div class="skills__names">
-        <i class='bx bxl-javascript skills__icon'></i>
-        <span class="skills__name">HTML</span>
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">MyPortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        </ul>
       </div>
-      <div class="skills__bar skills__js"></div>
-      <div><span class="skills__percentage">80%</span></div>
     </div>
+  </nav>
 
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fab fa-java skills__icon"></i>
-    <span class="skills__name">Java</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div>
-    <span class="skills__percentage">60%</span>
-  </div>
-</div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4">Hello, I’m Your Name</h1>
+      <p class="lead">A passionate professional in your field</p>
+      <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+    </div>
+  </section>
 
-    <div class="skills__data">
-      <div class="skills__names">
-        <i class='bx bxl-css3 skills__icon'></i>
-        <span class="skills__name">CSS</span>
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. I am skilled in multiple areas including web development, design, and project management.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4">Skills</h2>
+      <div class="row g-4 skills">
+        <div class="col-md-6">
+          <h5>HTML & CSS</h5>
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 90%">90%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h5>JavaScript</h5>
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%">80%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h5>PHP & MySQL</h5>
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%">75%</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h5>Bootstrap</h5>
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 85%">85%</div>
+          </div>
+        </div>
       </div>
-      <div class="skills__bar skills__css"></div>
-      <div><span class="skills__percentage">80%</span></div>
     </div>
+  </section>
 
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-pencil-ruler skills__icon"></i>
-    <span class="skills__name">UX/UI</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">80%</span></div>
-</div>
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fab fa-php skills__icon"></i>
-    <span class="skills__name">PHP Backend</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">80%</span></div>
-</div>
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-database skills__icon"></i>
-    <span class="skills__name">SQL Query (MySQL Workbench)</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">80%</span></div>
-</div>
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-ticket-alt skills__icon"></i>
-    <span class="skills__name">Zoho Desk (Ticketing Management System)</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
-</div>
-
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-users-cog skills__icon"></i>
-    <span class="skills__name">Odoo CRM</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
-</div>
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-user-shield skills__icon"></i>
-    <span class="skills__name">Active Directory</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">75%</span></div>
-</div>
-
-<!-- Shell Scripting -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-terminal skills__icon"></i>
-    <span class="skills__name">Shell Scripting</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">80%</span></div>
-</div>
-
-<!-- System Monitoring -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-chart-line skills__icon"></i>
-    <span class="skills__name">System Monitoring (NiTO, HeartBeat)</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">65%</span></div>
-</div>
-
-<!-- Patch Management -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-tools skills__icon"></i>
-    <span class="skills__name">Patch Management (Itarian, Ansible)</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">60%</span></div>
-</div>
-
-<!-- System Board Branding -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-microchip skills__icon"></i>
-    <span class="skills__name">System Board Branding</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">80%</span></div>
-</div>
-
-<!-- VoIP Setup -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-phone-volume skills__icon"></i>
-    <span class="skills__name">VoIP Setup</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">65%</span></div>
-</div>
-
-<!-- Surveillance Installation -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-video skills__icon"></i>
-    <span class="skills__name">Surveillance Installation (Solar, IP & Analog)</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">90%</span></div>
-</div>
-
-<!-- Hardware/Electronic Repairs -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-tools skills__icon"></i>
-    <span class="skills__name">Hardware/Electronic Repairs</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">80%</span></div>
-</div>
-
-<!-- Cable Management -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-network-wired skills__icon"></i>
-    <span class="skills__name">Cable Management (Cat6, Copper)</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">80%</span></div>
-</div>
-
-<!-- Server Rack Assembly -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-server skills__icon"></i>
-    <span class="skills__name">Server Rack Assembly</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">80%</span></div>
-</div>
-
-<!-- IT Support -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-headset skills__icon"></i>
-    <span class="skills__name">IT Support</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">80%</span></div>
-</div>
-
-<!-- Network Troubleshooting -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-network-wired skills__icon"></i>
-    <span class="skills__name">Network Troubleshooting (DHCP)</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">60%</span></div>
-</div>
-
-<!-- Quality Assurance -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-check-circle skills__icon"></i>
-    <span class="skills__name">Quality Assurance</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">60%</span></div>
-</div>
-
-<!-- Reliability Testing -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-vial skills__icon"></i>
-    <span class="skills__name">Reliability Testing</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">60%</span></div>
-</div>
-
-<!-- Risk Assessment -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-exclamation-triangle skills__icon"></i>
-    <span class="skills__name">Probabilistic Risk Assessment</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">60%</span></div>
-</div>
-
-<!-- Preventive Maintenance -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-wrench skills__icon"></i>
-    <span class="skills__name">Preventive Maintenance</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">75%</span></div>
-</div>
-
-<!-- IT Auditing -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-clipboard-check skills__icon"></i>
-    <span class="skills__name">IT Auditing</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
+  <!-- Education Section -->
+  <section id="education" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Education</h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Bachelor of Information Systems</strong> - University Name (2020-2024)
+        </li>
+        <li class="list-group-item">
+          <strong>High School Diploma</strong> - Hoerskool Eric Louw (2015-2019)
+        </li>
+      </ul>
     </div>
+  </section>
 
- <!-- IT Auditing -->
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-clipboard-check skills__icon"></i>
-    <span class="skills__name">IT Asset Management(Snipe_IT, VTiger)</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
-</div>  
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-headset skills__icon"></i> <!-- headset icon for customer care -->
-    <span class="skills__name">Customer Care</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
-</div> 
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-file-alt skills__icon"></i> <!-- file-alt icon for documentation -->
-    <span class="skills__name">Documentation</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
-</div> 
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-file-alt skills__icon"></i> <!-- file-alt icon for documentation -->
-    <span class="skills__name">Documentation</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
-</div> 
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-desktop skills__icon"></i> <!-- desktop icon for Remote Access -->
-    <span class="skills__name">Remote Access (RDP, Teamviewer, AnyDesk)</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
-</div> 
-
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-shield-alt skills__icon"></i> <!-- shield icon for Sandboxing -->
-    <span class="skills__name">Sandboxing</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
-</div> 
-<div class="skills__data">
-  <div class="skills__names">
-    <i class="fas fa-shield-alt skills__icon"></i> <!-- shield icon for system backup and recovery -->
-    <span class="skills__name">System Backup and Recovery</span>
-  </div>
-  <div class="skills__bar skills__ux"></div>
-  <div><span class="skills__percentage">70%</span></div>
-</div> 
-
-
-  </div>
-</section>
-<!--===== EDUCATION =====-->
-<section class="education section" id="education">
-  <h2 class="section-title">Education & Certifications</h2>
-
-  <div class="education__container bd-grid">
-
-    <!-- Tertiary -->
-    <div class="education__item">
-      <h3 class="education__degree"><i class="fas fa-user-graduate"></i> Bachelor of Information Systems</h3>
-      <span class="education__institution"><u>University of Botswana, Botswana,Completion: May 2025</u></span>
-
-          <table class="experience__table">
-        <thead>
-             <tr>
-      <th colspan="6">Course Work overtime</th>
-    </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td>Information Systems Enterprise Systems(ERPs)</td>
-              <td>Network Management</td>
-              <td>System Administration</td>
-              <td>Information Security</td>
-              <td>Systems Analysis, Design and Implementatation</td>
-              <td>IT & Productivity Tools(macros VBA)</td>
-           </tr>
-            <tr>
-              <td>Data & Information Management(SQL)</td>
-              <td>Java</td>
-              <td>Supply Chain Management & Logistics</td>
-              <td>Information Systems Auditing</td>
-              <td>Systems Architecture</td>
-              <td>Decision Support Systems</td>
-            </tr>
-            <tr>
-                <td>Electronic Business</td>
-                <td>Project Management(Agile Scrum)</td>
-                <td>Financial Analysis and Accounting</td>
-                <td>Monitoring & Evaluation</td>
-                <td>AI Research</td>
-                <td>Strategic Management</td>
-            </tr>
-        </tbody>
-      </table>
-
-      <table class="experience__table">
-        <thead>
-          <tr>
-            <th>Assignments and Projects</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <ul>
-                <li><i class="fas fa-file-alt"></i> Research Proposal on Data Integrity on Health Information Systems</li>
-                <li><i class="fas fa-file-alt"></i> Research Proposal on Digital Social Exclusion amongst Elderly Demographics</li>
-                <li><i class="fas fa-brain"></i> Business Value Contribution of Artificial Intelligence (AI) in Information Systems</li>
-                <li><i class="fas fa-search-dollar"></i> Conducted Information Systems Audit Analysis on ABSA Botswana Bank</li>
-                <li><i class="fas fa-gavel"></i> Fraud Diamond Theory (FDT)-4</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <ul>
-                <li><i class="fas fa-globe"></i> Website for Electrum Portlinks</li>
-                <li><i class="fas fa-id-card"></i> Electoral Voters Form</li>
-                <li><i class="fas fa-car-crash"></i> Traffic Booking Violation System</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Secondary -->
-    <div class="education__item">
-      <h3 class="education__degree"><i class="fas fa-school"></i> National Senior Certificate</h3>
-      <span class="education__institution"><u>Hoërskool Eric Louw, South Africa, Completed: November 2014</u></span>
- 
-         <ul>
-            <li>English Home Languange</li>
-            <li>Afrikaans First Additional Language</li>
-            <li>Mathematics</li>
-            <li>Geography</li>
-            <li>Biology</li>
-            <li>Business Studies</li>
-          </ul>
-    </div>
-
-  </div>
-</section>
-<!--===== SYSTEM GALLERY =====-->
-<section class="system-gallery section" id="systems">
-  <h2 class="section-title">System Showcase</h2>
-  <p style="text-align: center;"><b>Please click on the images to view them</b></p>
-
-  <div class="gallery-grid">
-    <!-- Replace "img/thumb1.jpg" and "img/full1.jpg" with your actual image paths -->
-      <a href="assets/systimg/1e.1.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/1e.1.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/1e.2.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/1e.2.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/1e.3.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/1e.3.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/1e.4.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/1e.4.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/1e.5.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/1e.5.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/1e.6.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/1e.6.jpg" alt="Electrum Portlinks">
-
-    <!-- Add 6 more for the other 2 systems -->
-       <a href="assets/systimg/s1.JPG" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s1.JPG" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/s3.png" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s3.png" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/s2.1.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s2.1.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/s4.png" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s4.png" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/s5.png" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s5.png" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/s6.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s6.jpg" alt="Electrum Portlinks">
-
-            <a href="assets/systimg/s7.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s7.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/s8.png" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s8.png" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/s1e.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s1e.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/d2.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/d2.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/d1.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/d1.jpg" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/s11.jpg" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/s11.jpg" alt="Electrum Portlinks"></a>
-  </div>
-</section>
-
-
-
-<!-- Include icon library in <head> (Font Awesome example) -->
-
-
-<!-- Google Certificates -->
-<table class="certifications__table">
-  <thead>
-    <tr>
-      <th colspan="3">Certificates</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><i class="fas fa-server"></i> Data Center Technician – Schneider Electric</td>
-      <td><i class="fas fa-database"></i> AWS Data Centers Milan – Schneider Electric</td>
-      <td><i class="fas fa-desktop"></i> CompTIA A+ (220-1101) – CompTIA</td>
-    </tr>
-    <tr>
-      <td><i class="fas fa-video"></i> CCTV & Access Control – Elzoneta</td>
-      <td><i class="fas fa-shield-alt"></i> IS Audit, Assurance & Control – Coursera</td>
-      <td><i class="fas fa-certificate"></i> ISO 9001:2015 – Quality Management</td>
-    </tr>
-    <tr>
-      <th colspan="3">Google Certificates Professional</th>
-    </tr>
-    <tr>
-      <td><i class="fab fa-google"></i> Google IT Support Professional</td>
-      <td><i class="fas fa-tasks"></i> Google Project Management Professional</td>
-      <td><i class="fas fa-chart-line"></i> Google Data Analytics Professional</td>
-    </tr>
-    <tr>
-      <th colspan="3">IBM Certificates</th>
-    </tr>
-    <tr>
-      <td><i class="fas fa-lock"></i> Cybersecurity Fundamentals</td>
-      <td><i class="fas fa-cloud"></i> Cloud Computing Fundamentals</td>
-      <td><i class="fas fa-laptop-code"></i> Information Technology Fundamentals</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-</section>
-            <!--===== WORK =====-->
-    <section id="Work Experience" class="Work Experience section">
-  <h2 class="section-title">Work Experience</h2>
-
-  <div class="experience__container">
-
-  <table class="experience__table">
-    <thead>
-      <tr>
-        <th>Position & Company</th>
-        <th>Duration</th>
-        <th>Daily Duties</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <tr>
-        <td>
-          <strong>Industrial Attachment– <br>New Technology Group</strong><br>
-          (Dell, Lenovo, HP, Fortinet Partners)
-        </td>
-        <td>May – Oct 2024</td>
-        <td>
-          <ul>
-            <li>Hardware troubleshooting and replacement of laptop and desktop unit parts</li>
-            <li>Relocation and routing of network cables and modules</li>
-            <li>Data migration of desktop systems and operating system cloning</li>
-            <li>Provided advice and support to customers</li>
-            <li>Decommissioned hardware for simple changes and refreshes (memory and peripheral upgrades, rebuilds) following standard procedures with minimal guidance.</li>
-            <li>Assisted other technicians to complete challenging or complex tasks.</li>
-            <li>Completes required training aligned to the role and workload and observed more experienced technicians to gain hands-on experience and relevant on-the-job training.</li>
-            <li>Troubleshooting and hardware repairs of printing machines</li>
-            <li>Analyze equipment failure trends and recommendation of parts replacements</li>
-            <li>Performed quality assurance tests on all HP, Canon, printers and desktop units</li>
-            <li>Document tasks and issues found in maintenance and troubleshooting for follow up</li>
-            <li>Participated in daily safety briefings</li>
-            <li>Completes assigned tickets efficiently</li>
-            <li>Installation, Configuration of IP Surveillance Systems and time attendance system</li>
-            <li>Assemble, setup and testing of 3000mw Laser CNC Printer Machine</li>
-            <li>Attend to callouts throughout city customer callouts</li>
-          </ul>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <strong>Industrial Attachment– Okavango Diamond Company</strong><br>
-        </td>
-        <td>July 2024</td>
-        <td>
-          <ul>
-            <li>Mounting and setup of network cabinets, and modification sizes with iron cutter machine</li>
-            <li>Setup and configuration of TP-Link Router as extender</li>
-            <li>Installation and setup of network patch panels and switches</li>
-            <li>Cable tracing of faulty network cables and re-termination</li>
-            <li>Setup and installation of Grand Stream PABX Telephony System</li>
-            <li>Termination of network modules and CAT6 cables</li>
-            <li>Fibre optical cabling</li>
-          </ul>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <strong>Field IT Support Technician – Electrum Portlinks</strong><br>
-          
-        </td>
-        <td>2020 – 2024</td>
-        <td>
-          <ul>
-            <li>Completed system backups and provided, setup and configured desktop, laptops and printers</li>
-            <li>Promoted new products and completed assigned tasks</li>
-            <li>Maintained and upgraded hardware and software</li>
-            <li>Identified and investigated network issues</li>
-            <li>Testing Power Supply Units (PSUs) voltage, continuity</li>
-            <li>Replacing leaking capacitors</li>
-            <li>Service, firmware upgrades and maintenance of printing machines</li>
-            <li>Virtualization, sandboxing, remote desktop connection</li>
-            <li>Troubleshooting and solution implementation</li>
-            <li>Provided technical support and provided education to clients on computer usage</li>
-            <li>Performed installations, setup and configurations of surveillance systems (Analog, IP and Solar)</li>
-            <li>Performed OS cloning and data migration</li>
-            <li>Company web design</li>
-            <li>Troubleshooting power supply units and devices</li>
-            <li>Replacements of desktop units (motherboards, RAMS, processor and update of BIOS)</li>
-          </ul>
-        </td>
-      </tr>
-
-      <!-- New Role Added Here -->
-      <tr>
-        <td>
-          <strong>Freelance Support – GFP Refrigeration & Air-Conditioning</strong><br>
-        </td>
-        <td>2022 – 2023</td>
-        <td>
-          <ul>
-            <li>Upgraded computer operating systems from Windows 7 to Windows 10.</li>
-            <li>Upgraded the memory module from 1Gb to 4 Gb</li>
-            <li>Restored point of Sale System (Retailman) back to working standard and thermal printer.</li>
-            <li>Restored all printers connections</li>
-            <li>Linked all computers through network to minimize movement between stations shared.</li>
-            <li>Created and stored backups of documents to cloud accounts</li>
-            <li>Provided IT support (Remotely and in person)</li>
-            <li>Dress and route cable</li>
-            <li>Make up and terminating of network cables and testing.</li>
-            <li>Desktop setup and proactive maintenance to computer system</li>
-            <li>Removal of old motherboards and installation of new motherboards</li>
-            <li>Provide feedback on processes and make recommendations on areas to improve</li>
-          </ul>
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
-  </div>
-  <div>
-</section>
-
-<section class="Work Images section" id="Work Images">
-  <h2 class="section-title">Industrial Attachment-New Jwaneng Mine Hospital</h2>
-
-  <div class="slider-container">
-    <div class="slider-track">
-      <img src="assets/img/work1.jpg" alt="Work 1" class="portfolio__img">
-      <img src="assets/img/work2.jpg" alt="Work 2" class="portfolio__img">
-      <img src="assets/img/work3.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/work4.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/work5.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/work6.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/work7.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/work8.jpg" alt="Work 8" class="portfolio__img">
-
-      <img src="assets/img/work1.jpg" alt="Work 1" class="portfolio__img">
-      <img src="assets/img/work2.jpg" alt="Work 2" class="portfolio__img">
-      <img src="assets/img/work3.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/work4.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/work5.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/work6.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/work7.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/work8.jpg" alt="Work 8" class="portfolio__img">
-    </div>
-  </div>
-  <br>
-  <p class="portfolio__caption">Performed various cable management that involved, relocation(cable trays), terminations, testing of cables in different wards of the hospital. Mounted 12U and 15U server rack network cabinets with power distribution units throughout the wards and relocated cat6 cables for setup along with cisco switches and patch panels. Connected everthing to a back UPS source to be used for emergency power downtime. Re-connected the IP telephones and labelled different
-cat 6 cables to represent ward, they were pulled from.</p>
-
- <h2 class="section-title">Industrial Attachment-Okavango Diamond Company Site(Diamond Polishing)</h2>
-
-  <div class="slider-container">
-    <div class="slider-track">
-      <img src="assets/img/n1.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/n8.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/n7.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/n13.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/n9.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/n10.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/n11.jpg" alt="Work 8" class="portfolio__img">
-
-         
-      <img src="assets/img/n1.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/n8.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/n7.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/n13.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/n9.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/n10.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/n11.jpg" alt="Work 8" class="portfolio__img">
-    </div>
-  </div>
-  <br>
-  <p class="portfolio__caption">A picture of the server room at ODC site where all the network cables and fibre optic cables coming from the entire building are connected. Mounted network cabinets throughout the ODC site and modified some of them with rotary iron cutter
-tool to extend them for accommodating some of the larger patch panels and cisco switches to be installed. Installed energizers as well to be used for powering the electric fence around the site.
-Relocated network cables and terminated network modules for access points. Assisted with assembling of 18u server rack and conneceted UPS as back power. The rack consisted of switches, relocated cables for IP cctv cameras and grandstream telephone infrastucture for inbound and outbound calls. Set up a Fortinet firewall to create 2 separate LANs for internal staff usage and general public. Performed inventory recording and documentation of commissioned and decommissioned IT equipment.</p>
-</section>
-
-
-  <div class="slider-container">
-    <div class="slider-track">
-           <img src="assets/img/n2.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/n3.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/n4.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/n5.5.jpg" alt="Work 4" class="portfolio__img">
-    <img src="assets/img/n4.5.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/n5.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/n6.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/n12.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/n13.jpg" alt="Work 8" class="portfolio__img">
-      <img src="assets/img/n14.jpg" alt="Work 8" class="portfolio__img">
-      <img src="assets/img/n5.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/n6.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/n12.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/n14.jpg" alt="Work 8" class="portfolio__img">
-
-         
-           <img src="assets/img/n2.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/n3.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/n4.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/n5.5.jpg" alt="Work 4" class="portfolio__img">
-    <img src="assets/img/n4.5.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/n5.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/n6.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/n12.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/n13.jpg" alt="Work 8" class="portfolio__img">
-      <img src="assets/img/n14.jpg" alt="Work 8" class="portfolio__img">
-      <img src="assets/img/n5.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/n6.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/n12.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/n14.jpg" alt="Work 8" class="portfolio__img">
-    </div>
-  </div>
-
-  <table class="experience__table">
-    <tbody>
-      <tr>
-        <td>
-      <img src="assets/img/z18e.mp4" alt=" ethernet testing" class="portfolio__img">
-      <video class="portfolio__img" autoplay muted loop playsinline>
-      <source src="assets/img/z18e.mp4" type="video/mp4"></video>
-        </td>
-      
-        <td>
-        <img src="assets/img/z18e.mp4" alt=" Configuration 360 degree Pan Tilt Zoom(PTZ)" class="portfolio__img">
-        <video class="portfolio__img" autoplay muted loop playsinline>
-        <source src="assets/img/z16e.mp4" type="video/mp4"></video>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2 class="section-title">Field IT Support Technician-Electrum Portlinks/GFP Refrigeration & Air-Conditioning</h2>
-
-  <div class="slider-container">
-    <div class="slider-track">
-      <img src="assets/img/z0.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/z1.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/z2.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/z2.2.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z3.png" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z4.3.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/z4.4.jpg" alt="Work 8" class="portfolio__img">
-         
-            <img src="assets/img/z0.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/z1.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/z2.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/z2.2.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z3.png" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z4.3.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/z4.4.jpg" alt="Work 8" class="portfolio__img">
-    </div>
-  </div>
-  <br>
-  <div class="slider-container">
-    <div class="slider-track">
-      <img src="assets/img/z4.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/z5.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/z6.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/z2.2.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z7.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z8.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/z9.jpg" alt="Work 8" class="portfolio__img">
-         
-      <img src="assets/img/z4.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/z5.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/z6.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/z2.2.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z7.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z8.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/z9.jpg" alt="Work 8" class="portfolio__img">
-
-      <br>
-      <img src="assets/img/y1.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/y.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/y3.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/z10.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z11.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z12.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/z13.jpg" alt="Work 8" class="portfolio__img">
-
-      <img src="assets/img/y1.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/y.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/y3.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/z10.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z11.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z12.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/z13.jpg" alt="Work 8" class="portfolio__img">
+  <!-- Work Experience Section -->
+  <section id="work" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4">Work Experience</h2>
+      <div class="timeline">
+        <div class="mb-4">
+          <h5>IT Support Specialist - Company Name</h5>
+          <p class="mb-0"><small>2024 - Present</small></p>
+          <p>Providing IT support, troubleshooting issues, and managing systems.</p>
+        </div>
+        <div class="mb-4">
+          <h5>Intern - Company Name</h5>
+          <p class="mb-0"><small>2023 - 2024</small></p>
+          <p>Assisted with IT projects, database management, and system analysis.</p>
+        </div>
       </div>
-      <div>
-        <br>
-          <div class="slider-container">
-    <div class="slider-track">
-      <img src="assets/img/z14.4.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/z14.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/z15.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/z16.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z17.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z16.1.2.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/l1.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/l2.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/l3.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/l4.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z17.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z16.1.2.jpg" alt="Work 7" class="portfolio__img">
+    </div>
+  </section>
 
-            <img src="assets/img/z14.4.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/z14.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/z15.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/z16.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z17.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z16.1.2.jpg" alt="Work 7" class="portfolio__img">
-      <img src="assets/img/l1.jpg" alt="f" class="portfolio__img">
-      <img src="assets/img/l2.jpg" alt="Work 3" class="portfolio__img">
-      <img src="assets/img/l3.jpg" alt="Work 4" class="portfolio__img">
-      <img src="assets/img/l4.jpg" alt="Work 5" class="portfolio__img">
-      <img src="assets/img/z17.jpg" alt="Work 6" class="portfolio__img">
-      <img src="assets/img/z16.1.2.jpg" alt="Work 7" class="portfolio__img">
-      <br>
-
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Gallery</h2>
+      <div class="row g-3 gallery">
+        <div class="col-md-4"><img src="https://via.placeholder.com/400x300" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="https://via.placeholder.com/400x300" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="https://via.placeholder.com/400x300" alt="Gallery Image"></div>
       </div>
-      <div>
-</section>
-  </div>
-</section>
-
-    <h2 class="section-title">Zoho Desk SaaS(Helpdesk), Itarian(Patch Management), NiTO SaaS(Monitoring)</h2>
-    <p style="text-align: center;"><b>Please click on the images to view them</b></p>
-
-    <div class="system-gallery">
-    <div class="gallery-grid">
-    <!-- Add 6 more for the other 2 systems -->
-       <a href="assets/systimg/zod.JPG" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/zod.JPG" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/a1.gif" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/a1.gif" alt="Electrum Portlinks">
-
-     <a href="assets/systimg/h2.png" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/h2.png" alt="Electrum Portlinks">
-
-      <a href="assets/systimg/ss.png" data-lightbox="systems" data-title="Electrum Portlinks">
-      <img src="assets/systimg/ss.png" alt="Electrum Portlinks">
-</a>
-  </div>
-  </div>
-</section>
-
-<!--===== CONTACT =====-->
-<section class="contact section" id="contact">
-    <h2 class="section-title">Contact</h2>
-
-    <div class="contact__container bd-grid contact__info">
-        <p><i class='bx bxl-microsoft'></i> 
-            <strong>Outlook:</strong> <a href="mailto:201500001@ub.ac.bw">201500001@ub.ac.bw</a>
-        </p>
-        <p><i class='bx bxl-gmail'></i> 
-            <strong>Gmail:</strong> <a href="mailto:brendonwork14@gmail.com">brendonwork14@gmail.com</a>
-        </p>
-        <p><i class='bx bxl-whatsapp'></i> 
-            <strong>WhatsApp:</strong> <a href="https://wa.me/26775456820" target="_blank">+267 7545 6820</a>
-        </p>
-        <p><i class='bx bxl-linkedin-square'></i> 
-            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/brendon-mutema-6824a6340/" target="_blank">Brendon Mutema</a>
-        </p>
     </div>
-</section>
+  </section>
 
-
-
-<!--===== FOOTER =====-->
-<footer class="footer">
-    <p class="footer__title">Brendon Mutema</p>
-    <div class="footer__social">
-        <a href="https://www.linkedin.com/in/brendon-mutema-6824a6340/" class="footer__icon" target="_blank">
-            <i class='bx bxl-linkedin-square'></i>
-        </a>
-        <a href="https://wa.me/26775456820" class="footer__icon" target="_blank">
-            <i class='bx bxl-whatsapp'></i>
-        </a>
-        <a href="mailto:201500001@ub.ac.bw" class="footer__icon">
-            <i class='bx bxl-microsoft'></i>
-        </a>
-        <a href="mailto:brendonwork14@gmail.com" class="footer__icon">
-            <i class='bx bxl-gmail'></i>
-        </a>
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Your Name. All Rights Reserved.</p>
     </div>
-</footer>
+  </footer>
 
-
-
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
