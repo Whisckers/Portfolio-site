@@ -58,6 +58,7 @@ h1, h2, p {
 ul {
   margin: 0;
   padding: 0;
+  line-height: 2.0;
   list-style: none;
 }
 
@@ -434,12 +435,14 @@ img {
   padding: 1rem;
   font-size: 1rem;
   vertical-align: middle;
+  justify-self: center;
 }
 
 .experience__table th {
   background-color: var(--first-color);
   color: #fff;
   font-weight: bold;
+  justify-self: center;
 }
 
 /* Center list items */
@@ -449,6 +452,7 @@ img {
   margin: 0 auto;
   display: inline-block;  /* Helps center the list block */
   text-align: left;       /* Aligns text inside the centered list */
+  justify-self: center;
 }
 
 
@@ -699,4 +703,27 @@ img {
   .home__img {
     width: 450px;
   }
+}
+/*===== RESUME BUTTON =====*/
+.resume__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.resume__button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.resume__button i {
+    font-size: 20px;
 }
