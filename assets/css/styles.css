@@ -727,3 +727,24 @@ img {
 .resume__button i {
     font-size: 20px;
 }
+.projects__box {
+  width: 75%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 25px;
+  box-sizing: border-box;
+
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+.projects__box ul {
+  margin: 0;
+  padding: 0;
+}
+
+.projects__box li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
